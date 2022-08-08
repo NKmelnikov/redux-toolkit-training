@@ -1,0 +1,24 @@
+.currencies {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+
+  &__card {
+    width: 169px;
+    padding: 16px;
+    border-left: 1px solid lightgray;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+      background-color: whitesmoke;
+    }
+
+    &.selected {
+      background-color: whitesmoke;
+    }
+  }
+}
