@@ -1,0 +1,17 @@
+.favorites {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+
+  &__card {
+    font-size: 36px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+
+    &_name {
+      width: 164px;
+    }
+  }
+}

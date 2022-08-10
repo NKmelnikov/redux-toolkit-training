@@ -1,5 +1,8 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
-import { ICurrencyList } from '../../models';
+import {
+  ICurrencyList,
+  ICurrencyRates
+} from '../../models';
 
 // const URL_API_BASE = 'https://currate.ru/api/';
 const URL_API_BASE = 'http://localhost:8010/proxy/api/';
@@ -21,7 +24,18 @@ export const currenciesApi = createApi({
         },
       }),
     }),
+    getCurrencyRates: build.query<ICurrencyRates, string>({
+      query: (pairs) => ({
+        url: ``,
+        method: 'GET',
+        params: {
+          get: 'rates',
+          pairs:pairs,
+          key: API_KEY,
+        },
+      }),
+    }),
   }),
 });
 
-export const { useGetCurrencyListQuery } = currenciesApi;
+export const { useGetCurrencyListQuery, useGetCurrencyRatesQuery } = currenciesApi;

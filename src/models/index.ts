@@ -3,3 +3,9 @@ export interface ICurrencyList {
   message: string;
   data: string[];
 }
+
+export interface ICurrencyRates {
+  status: string;
+  message: string;
+  data: any;
+}
